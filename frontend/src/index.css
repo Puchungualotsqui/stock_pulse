@@ -1,0 +1,24 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* You can define your theme overrides if needed */
+@theme {
+    --font-sans: system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+/* Custom root styles */
+:root {
+    color-scheme: light dark;
+    font-family: var(--font-sans);
+}
+
+/* Optional: fallback styling */
+body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: var(--color-base-200);
+}
