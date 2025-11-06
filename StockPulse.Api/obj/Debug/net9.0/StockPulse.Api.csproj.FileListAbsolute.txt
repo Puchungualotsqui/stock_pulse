@@ -44,3 +44,4 @@
 /mnt/storage/Documents/Projects/WebDevelopment/StockPulse/StockPulse.Api/obj/Debug/net9.0/StockPulse.Api.pdb
 /mnt/storage/Documents/Projects/WebDevelopment/StockPulse/StockPulse.Api/obj/Debug/net9.0/StockPulse.Api.genruntimeconfig.cache
 /mnt/storage/Documents/Projects/WebDevelopment/StockPulse/StockPulse.Api/obj/Debug/net9.0/ref/StockPulse.Api.dll
+/mnt/storage/Documents/Projects/WebDevelopment/StockPulse/StockPulse.Api/obj/Debug/net9.0/StockPulse.Api.sourcelink.json
