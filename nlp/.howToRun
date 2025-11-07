@@ -1,0 +1,5 @@
+cd ..
+uvicorn nlp.main:app --reload
+
+test:
+wget -qO- "http://127.0.0.1:8000/analyze?symbol=AAPL"
