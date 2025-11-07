@@ -7,7 +7,7 @@
             header_up X-Forwarded-For {remote_host}
             header_up X-Forwarded-Proto {scheme}
 
-            # ✅ Add CORS headers
+            # Add CORS headers
             header_down Access-Control-Allow-Origin *
             header_down Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS"
             header_down Access-Control-Allow-Headers "Content-Type, Authorization"

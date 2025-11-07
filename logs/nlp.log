@@ -1,0 +1,14 @@
+INFO:     Will watch for changes in these directories: ['/mnt/storage/Documents/Projects/WebDevelopment/StockPulse']
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [27074] using WatchFiles
+INFO:     Started server process [27123]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+✅ API response keys: ['status', 'totalResults', 'results', 'nextPage']
+📰 First article sample: {'article_id': '3cc40ed15f8f3e772e69f51f3412114e', 'link': 'https://financialpost.com/pmn/business-pmn/stocks-tumble-as-bleak-jobs-spur-rally-in-bonds-markets-wrap', 'title': 'Stocks Tumble as Bleak Jobs Spur Rally in Bonds: Markets Wrap', 'description': 'Volatility lashed Wall Street, with strong evidence of a cooling labor market pushing high-valuation tech stocks and crypto to big losses while bonds rallied on bets the Federal Reserve will cut rates.', 'content': 'ONLY AVAILABLE IN PAID PLANS', 'keywords': ['pmn business', 'canada', 'bloom'], 'creator': ['Bloomberg News'], 'language': 'english', 'country': ['canada'], 'category': ['top', 'business'], 'pubDate': '2025-11-06 17:13:08', 'pubDateTZ': 'UTC', 'image_url': 'https://smartcdn.gprod.postmedia.digital/financialpost/wp-content/uploads/2025/11/apollos-jim-zelter-says-not-seeing-credit-cycle-waning-anyti.jpg', 'video_url': None, 'source_id': 'financialpost', 'source_name': 'Financial Post', 'source_priority': 7235, 'source_url': 'https://financialpost.com', 'source_icon': 'https://n.bytvi.com/financialpost.png', 'sentiment': 'ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLANS', 'sentiment_stats': 'ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLANS', 'ai_tag': 'ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLANS', 'ai_region': 'ONLY AVAILABLE IN CORPORATE PLANS', 'ai_org': 'ONLY AVAILABLE IN CORPORATE PLANS', 'ai_summary': 'ONLY AVAILABLE IN PAID PLANS', 'duplicate': False}
+INFO:     127.0.0.1:44132 - "GET /analyze?company=Alaska+Air+Group+Inc HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [27123]
+INFO:     Stopping reloader process [27074]
