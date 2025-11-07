@@ -1,11 +1,11 @@
 INFO:     Will watch for changes in these directories: ['/mnt/storage/Documents/Projects/WebDevelopment/StockPulse']
 INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
-INFO:     Started reloader process [46503] using WatchFiles
-INFO:     Started server process [46536]
+INFO:     Started reloader process [47465] using WatchFiles
+INFO:     Started server process [47498]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
 INFO:     Shutting down
 INFO:     Waiting for application shutdown.
 INFO:     Application shutdown complete.
-INFO:     Finished server process [46536]
-INFO:     Stopping reloader process [46503]
+INFO:     Finished server process [47498]
+INFO:     Stopping reloader process [47465]
