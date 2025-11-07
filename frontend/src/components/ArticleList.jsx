@@ -1,4 +1,12 @@
-export default function ArticleList({ articles }) {
+export default function ArticleList({ articles = [] }) {
+  if (!Array.isArray(articles) || articles.length === 0) {
+    return (
+      <div className="alert alert-info shadow-sm mt-4 text-center">
+        <span>No related news available.</span>
+      </div>
+    );
+  }
+
   return (
     <>
       <div className="divider font-semibold text-base-content/70">

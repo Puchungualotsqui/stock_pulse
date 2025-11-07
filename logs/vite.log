@@ -3,11 +3,10 @@
 > vite --host
 
 
-  VITE v7.2.1  ready in 161 ms
+  VITE v7.2.1  ready in 180 ms
 
   ➜  Local:   http://localhost:5173/
   ➜  Network: http://10.40.3.14:5173/
   ➜  Network: http://10.40.1.130:5173/
   ➜  Network: http://172.18.0.1:5173/
 /*! 🌼 daisyUI 5.4.5 */
-8:58:05 pm [vite] (client) hmr update /src/App.jsx, /src/index.css
