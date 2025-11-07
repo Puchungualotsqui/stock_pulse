@@ -23,7 +23,20 @@ export default function App() {
 
     try {
       const res = await fetch(`http://localhost:8080/api/analyze/${symbol}`);
-      if (!res.ok) throw new Error("Server error");
+
+      if (!res.ok) {
+        const errText = await res.text();
+        let message = "Server error";
+
+        // Try to extract FastAPI's detail field if present
+        try {
+          const parsed = JSON.parse(errText);
+          message = parsed.detail || message;
+        } catch {}
+
+        throw new Error(message);
+      }
+
       const json = await res.json();
       setData(json);
     } catch (err) {
@@ -32,7 +45,6 @@ export default function App() {
       setLoading(false);
     }
   };
-
 
   const handleInput = (e) => {
     const value = e.target.value.toUpperCase();
@@ -69,7 +81,32 @@ export default function App() {
       />
 
       {loading && <Loader />}
-      {error && <p className="text-error mt-4">{error}</p>}
+      {/* Error alert */}
+      {error && (
+        <div className="alert alert-error shadow-lg mt-6 max-w-xl flex flex-col items-center text-center">
+          <span className="font-medium mb-2">⚠️ {error}</span>
+          <button
+            className="btn btn-sm btn-outline btn-error"
+            onClick={handleSearch}
+          >
+            Try Again
+          </button>
+        </div>
+      )}
+
+      {/* Empty-state placeholder */}
+      {!loading && !error && !data && (
+        <div className="flex flex-col items-center justify-center mt-12 text-center text-base-content/70">
+          <p className="mb-3 text-lg">
+            🔍 Enter a stock ticker to analyze recent news sentiment.
+          </p>
+          <p className="text-sm opacity-80">
+            Example: <span className="font-semibold">AAPL</span>,{" "}
+            <span className="font-semibold">MSFT</span>,{" "}
+            <span className="font-semibold">TSLA</span>
+          </p>
+        </div>
+      )}
 
       {data && (
         <div className="w-full max-w-2xl space-y-4 animate-fadeIn">

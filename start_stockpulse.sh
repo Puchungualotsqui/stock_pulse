@@ -52,7 +52,7 @@ NLP_PID=$!
 
 # --- .NET API ---
 echo -e "${GREEN}➡ Starting .NET API on :5166...${NC}"
-(cd "$repo_root/StockPulse.Api" && dotnet run --no-build) > "$LOG_DIR/dotnet.log" 2>&1 &
+(cd "$repo_root/StockPulse.Api" && dotnet run) > "$LOG_DIR/dotnet.log" 2>&1 &
 DOTNET_PID=$!
 
 # --- Summary ---

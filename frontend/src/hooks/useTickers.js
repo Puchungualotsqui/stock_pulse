@@ -5,7 +5,7 @@ export function useTickers() {
   const [tickers, setTickers] = useState([]);
 
   useEffect(() => {
-    fetch("/tickers.csv")
+    fetch("http://localhost:8080/api/tickers")
       .then((res) => res.text())
       .then((csvText) => {
         const parsed = Papa.parse(csvText, { header: true });

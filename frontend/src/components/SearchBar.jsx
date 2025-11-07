@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Dropdown from "./Dropdown";
 
 export default function SearchBar({
@@ -11,19 +11,33 @@ export default function SearchBar({
   const [highlightIndex, setHighlightIndex] = useState(-1);
   const [showDropdown, setShowDropdown] = useState(false);
 
-  const handleKeyDown = (e) => {
-    if (!showDropdown || filtered.length === 0) return;
+  // 👇 Automatically show dropdown when there are filtered results
+  useEffect(() => {
+    if (filtered.length > 0) setShowDropdown(true);
+    else setShowDropdown(false);
+  }, [filtered]);
 
-    if (e.key === "ArrowDown") {
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
       e.preventDefault();
+
+      if (showDropdown && highlightIndex >= 0) {
+        selectTicker(filtered[highlightIndex].symbol);
+        setShowDropdown(false);
+      } else {
+        onSearch();
+        setShowDropdown(false);
+      }
+    } else if (e.key === "ArrowDown" && filtered.length > 0) {
+      e.preventDefault();
+      setShowDropdown(true);
       setHighlightIndex((prev) => (prev + 1) % filtered.length);
-    } else if (e.key === "ArrowUp") {
+    } else if (e.key === "ArrowUp" && filtered.length > 0) {
       e.preventDefault();
       setHighlightIndex((prev) => (prev <= 0 ? filtered.length - 1 : prev - 1));
-    } else if (e.key === "Enter" && highlightIndex >= 0) {
-      e.preventDefault();
-      selectTicker(filtered[highlightIndex].symbol);
+    } else if (e.key === "Escape") {
       setShowDropdown(false);
+      setHighlightIndex(-1);
     }
   };
 
@@ -37,9 +51,15 @@ export default function SearchBar({
           value={symbol}
           onChange={(e) => {
             onInput(e);
-            setShowDropdown(true);
+            setHighlightIndex(-1);
           }}
-          onFocus={() => setShowDropdown(symbol.length > 0)}
+          onFocus={() => {
+            if (filtered.length > 0) setShowDropdown(true);
+          }}
+          onBlur={() => {
+            // Delay closing to allow clicking an item
+            setTimeout(() => setShowDropdown(false), 150);
+          }}
           onKeyDown={handleKeyDown}
         />
         <button
