@@ -27,13 +27,10 @@ export default function App() {
       if (!res.ok) {
         const errText = await res.text();
         let message = "Server error";
-
-        // Try to extract FastAPI's detail field if present
         try {
           const parsed = JSON.parse(errText);
           message = parsed.detail || message;
         } catch {}
-
         throw new Error(message);
       }
 
@@ -81,6 +78,7 @@ export default function App() {
       />
 
       {loading && <Loader />}
+
       {/* Error alert */}
       {error && (
         <div className="alert alert-error shadow-lg mt-6 max-w-xl flex flex-col items-center text-center">
@@ -108,6 +106,7 @@ export default function App() {
         </div>
       )}
 
+      {/* Results */}
       {data && (
         <div className="w-full max-w-2xl space-y-4 animate-fadeIn">
           <SummaryCard
@@ -117,6 +116,27 @@ export default function App() {
           <ArticleList articles={data.articles} />
         </div>
       )}
+
+      {/* ──────────────────────── */}
+      {/* Footer */}
+      <footer className="mt-16 text-center text-sm opacity-70 text-base-content/80 border-t border-base-300 pt-6 w-full max-w-2xl">
+        <p className="mb-2">
+          <span className="font-medium">StockPulse</span> is a{" "}
+          <span className="font-semibold">university project</span> built for
+          learning and demonstration purposes only.
+        </p>
+        <p>
+          🔗{" "}
+          <a
+            href="https://github.com/Puchungualotsqui/stock_pulse/tree/main"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="link link-primary"
+          >
+            View source on GitHub
+          </a>
+        </p>
+      </footer>
     </div>
   );
 }

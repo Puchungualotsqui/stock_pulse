@@ -1,22 +1,11 @@
 INFO:     Will watch for changes in these directories: ['/mnt/storage/Documents/Projects/WebDevelopment/StockPulse']
 INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
-INFO:     Started reloader process [44842] using WatchFiles
-INFO:     Started server process [44890]
+INFO:     Started reloader process [46503] using WatchFiles
+INFO:     Started server process [46536]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
-✅ API response keys: ['status', 'totalResults', 'results', 'nextPage']
-⚠️ No results returned for query: Alcoa Corporation Common Stock
-🔍 Full API response: {'status': 'success', 'totalResults': 0, 'results': [], 'nextPage': None}
-INFO:     127.0.0.1:36236 - "GET /analyze?company=Alcoa+Corporation+Common+Stock HTTP/1.1" 404 Not Found
-✅ API response keys: ['status', 'totalResults', 'results', 'nextPage']
-⚠️ No results returned for query: "Assurant
-🔍 Full API response: {'status': 'success', 'totalResults': 0, 'results': [], 'nextPage': None}
-INFO:     127.0.0.1:49874 - "GET /analyze?company=%22Assurant HTTP/1.1" 404 Not Found
-✅ API response keys: ['status', 'totalResults', 'results', 'nextPage']
-📰 First article sample: {'article_id': 'b7b86a6226dc5ca264dedc75bf4506be', 'link': 'https://www.thelincolnianonline.com/2025/11/06/ionq-nyseionq-trading-up-3-8-on-analyst-upgrade.html', 'title': 'IonQ (NYSE:IONQ) Trading Up 3.8% on Analyst Upgrade', 'description': 'Shares of IonQ, Inc. (NYSE:IONQ – Get Free Report) were up 3.8% during trading on Thursday after DA Davidson raised their price target on the stock from $35.00 to $55.00. DA Davidson currently has a neutral rating on the stock. IonQ traded as high as $58.99 and last traded at $57.53. Approximately 35,126,070 shares changed [...]', 'content': 'ONLY AVAILABLE IN PAID PLANS', 'keywords': ['price articles', 'stocks'], 'creator': ['Stephan Jacobs'], 'language': 'english', 'country': ['united states of america'], 'category': ['business'], 'pubDate': '2025-11-06 21:54:44', 'pubDateTZ': 'UTC', 'image_url': 'https://www.marketbeat.com/logos/ionq-inc-logo-1200x675.png?v=20211203111404', 'video_url': None, 'source_id': 'thelincolnianonline', 'source_name': 'The Lincolnian Online', 'source_priority': 5143682, 'source_url': 'https://www.thelincolnianonline.com', 'source_icon': 'https://n.bytvi.com/thelincolnianonline.png', 'sentiment': 'ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLANS', 'sentiment_stats': 'ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLANS', 'ai_tag': 'ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLANS', 'ai_region': 'ONLY AVAILABLE IN CORPORATE PLANS', 'ai_org': 'ONLY AVAILABLE IN CORPORATE PLANS', 'ai_summary': 'ONLY AVAILABLE IN PAID PLANS', 'duplicate': False}
-INFO:     127.0.0.1:42554 - "GET /analyze?company=Microsoft+Corp. HTTP/1.1" 200 OK
 INFO:     Shutting down
 INFO:     Waiting for application shutdown.
 INFO:     Application shutdown complete.
-INFO:     Finished server process [44890]
-INFO:     Stopping reloader process [44842]
+INFO:     Finished server process [46536]
+INFO:     Stopping reloader process [46503]
