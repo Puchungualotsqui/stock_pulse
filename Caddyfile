@@ -1,0 +1,32 @@
+:8080 {
+    # --- .NET API ---
+    handle /api/* {
+        reverse_proxy localhost:5166 {
+            header_up Host {http.reverse_proxy.upstream.hostport}
+            header_up X-Real-IP {remote_host}
+            header_up X-Forwarded-For {remote_host}
+            header_up X-Forwarded-Proto {scheme}
+
+            # Add CORS headers
+            header_down Access-Control-Allow-Origin *
+            header_down Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS"
+            header_down Access-Control-Allow-Headers "Content-Type, Authorization"
+        }
+    }
+
+    # --- Python NLP service ---
+    handle /nlp/* {
+        reverse_proxy localhost:8000 {
+            header_down Access-Control-Allow-Origin *
+            header_down Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS"
+            header_down Access-Control-Allow-Headers "Content-Type, Authorization"
+        }
+    }
+
+    # --- React frontend ---
+    handle {
+        root * frontend/dist
+        file_server
+        try_files {path} /index.html
+    }
+}

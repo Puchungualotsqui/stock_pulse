@@ -1,0 +1,23 @@
+{"level":"info","ts":1762509948.3297322,"msg":"maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined"}
+{"level":"info","ts":1762509948.3298535,"msg":"GOMEMLIMIT is updated","package":"github.com/KimMachineGun/automemlimit/memlimit","GOMEMLIMIT":14820404428,"previous":9223372036854775807}
+{"level":"info","ts":1762509948.3298748,"msg":"using config from file","file":"/mnt/storage/Documents/Projects/WebDevelopment/StockPulse/Caddyfile"}
+{"level":"warn","ts":1762509948.330046,"logger":"caddyfile","msg":"Unnecessary header_up X-Forwarded-For: the reverse proxy's default behavior is to pass headers to the upstream"}
+{"level":"warn","ts":1762509948.3300507,"logger":"caddyfile","msg":"Unnecessary header_up X-Forwarded-Proto: the reverse proxy's default behavior is to pass headers to the upstream"}
+{"level":"info","ts":1762509948.3305624,"msg":"adapted config to JSON","adapter":"caddyfile"}
+{"level":"warn","ts":1762509948.330568,"msg":"Caddyfile input is not formatted; run 'caddy fmt --overwrite' to fix inconsistencies","adapter":"caddyfile","file":"/mnt/storage/Documents/Projects/WebDevelopment/StockPulse/Caddyfile","line":2}
+{"level":"info","ts":1762509948.3315976,"logger":"admin","msg":"admin endpoint started","address":"localhost:2019","enforce_origin":false,"origins":["//localhost:2019","//[::1]:2019","//127.0.0.1:2019"]}
+{"level":"info","ts":1762509948.3318038,"logger":"tls.cache.maintenance","msg":"started background certificate maintenance","cache":"0xc000675080"}
+{"level":"warn","ts":1762509948.3318758,"logger":"http","msg":"HTTP/2 skipped because it requires TLS","network":"tcp","addr":":8080"}
+{"level":"warn","ts":1762509948.331885,"logger":"http","msg":"HTTP/3 skipped because it requires TLS","network":"tcp","addr":":8080"}
+{"level":"info","ts":1762509948.331888,"logger":"http.log","msg":"server running","name":"srv0","protocols":["h1","h2","h3"]}
+{"level":"info","ts":1762509948.3319666,"msg":"autosaved config (load with --resume flag)","file":"/root/.local/share/caddy/autosave.json"}
+{"level":"info","ts":1762509948.3319716,"msg":"serving initial configuration"}
+{"level":"info","ts":1762509948.3331742,"logger":"tls","msg":"storage cleaning happened too recently; skipping for now","storage":"FileStorage:/root/.local/share/caddy","instance":"f20f0ae4-abc1-4c16-aada-76999a976a22","try_again":1762596348.333173,"try_again_in":86399.999999697}
+{"level":"info","ts":1762509948.3332314,"logger":"tls","msg":"finished cleaning storage units"}
+{"level":"info","ts":1762510008.356858,"msg":"shutting down apps, then terminating","signal":"SIGTERM"}
+{"level":"info","ts":1762510008.3568487,"msg":"shutting down","signal":"SIGINT"}
+{"level":"warn","ts":1762510008.3569021,"msg":"exiting; byeee!! 👋","signal":"SIGTERM"}
+{"level":"info","ts":1762510008.3569546,"logger":"http","msg":"servers shutting down with eternal grace period"}
+{"level":"info","ts":1762510008.3570848,"msg":"shutting down apps, then terminating","signal":"SIGTERM"}
+{"level":"info","ts":1762510008.3571415,"logger":"admin","msg":"stopped previous server","address":"localhost:2019"}
+{"level":"info","ts":1762510008.357165,"msg":"shutdown complete","signal":"SIGTERM","exit_code":0}
